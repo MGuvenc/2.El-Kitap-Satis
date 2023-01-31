@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@font-face {
+    font-family: mFont;
+    src: url(Arctic.otf);
+ }
+ @media (max-width: 600px) {
+    body, header, nav, section, footer, ul, li{
+      width: 100%;
+      height: auto;
+    }
+  }
+body {
+    background: #76b852; /* fallback for old browsers */
+    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+    background: -moz-linear-gradient(right, #76b852, #8DC26F);
+    background: -o-linear-gradient(right, #76b852, #8DC26F);
+    background: linear-gradient(to left, #76b852, #8DC26F);
+    font-family: mFont;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;      
+}
+header {
+    background-color: #8DC26F;
+    color:white;
+    padding:10px;	 
+    text-align:center;
+    font-family: mFont;
+}
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: #8DC26F;
+}
+li {
+    float: right;
+}
+nav {
+    background-color:#8DC26F;
+    width:100px;
+    height:300px;
+    float:left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    line-height:30px;
+}
+li a, nav a {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+li a:hover, nav a:hover {
+    color: #f0f0f0;
+    background: #76b852;
+}
+section {
+    width: 100% -100px;;
+    padding:25px;
+    float:right;
+}
+footer {
+    background-color:#8DC26F;
+    color:white;
+    text-align:center;
+    clear:both;
+    padding:35px;
+    margin-bottom: 0px; 
+}
+.kitap {
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    float: right;
+    box-sizing: content-box;
+}
+.temizle {
+    clear: both;
+}
+.button {
+    width: 100%;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .button1 {
+    background-color: white; 
+    color: black;
+  }
+  
+  .button1:hover {
+    background-color: #76b852;
+    color: white;
+  }
+  .button2 {
+    background-color: white; 
+    color: black;
+  }
+  
+  .button2:hover {
+    background-color: rgb(231, 120, 120);
+    color: white;
+  }
+h5, h6{
+    width: 100%;
+    text-align: center;
+  }
+  textarea {
+    color: #f0f0f0;
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    background-color: transparent;
+    resize: none;
+    margin: 50px 50px;
+  }
