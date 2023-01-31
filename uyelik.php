@@ -71,6 +71,31 @@
  
 
     </div>
+<?php
+
+    /* Üyelik Kaydı */
+
+    if(isset($_POST["btn"])){
+      if(!empty($_POST["isim"])&&!empty($_POST["mail"])&&!empty($_POST["sifre"])&&!empty($_POST["telefon"])&&!empty($_POST["adres"])&&!empty($_POST["dogum_tarihi"])){
+        $isim = $_POST["isim"];
+        $mail = $_POST["mail"];
+        $sifre = $_POST["sifre"];
+        $telefon = $_POST["telefon"];
+        $adres = $_POST["adres"];
+        $dogum_tarihi = $_POST["dogum_tarihi"];
+        $sql = "INSERT INTO uyelik (isim, mail, sifre, telefon, adres, dogum_tarihi) VALUES ('".$isim."', '".$mail."', '".$sifre."', '".$telefon."', '".$adres."', '".$dogum_tarihi."')";
+        if($conn->query($sql) === TRUE){
+          echo '<div class="w3-panel w3-pale-green w3-round-large w3-border">
+                <h3>Üyelik Kaydı Başarılı!</h3>
+                <p>Giriş Yapabilirsiniz.</p>
+                </div>';
+        } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+        $conn->close();
+      }
+    }
+?>
 
 </div>
 
