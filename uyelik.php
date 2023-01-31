@@ -1,4 +1,14 @@
+<?php
 
+  ob_start();
+  session_start();
+  include("config.php");
+  /* Oturum Kontrolü */
+  if(isset($_SESSION["mail"])){
+    echo '<meta http-equiv="refresh" content="0;url=index.php">';
+  }else{
+  
+?>
 !doctype html>
 
 <html lang="TR">
