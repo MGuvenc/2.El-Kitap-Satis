@@ -30,7 +30,31 @@
     </nav>
 
     <section>
-       
+        <?php
+        $i=0;
+        if(empty($_GET["id"])){
+            $_GET["id"]="1";
+        }
+        $getID = $_GET["id"];
+        $sql = mysqli_query($conn, "SELECT * FROM urunler WHERE kategori_id=$getID");
+        if ($conn->connect_error) {
+            echo "<h3>Bu kategoride ürün bulunamadı!</h3>";
+        }else{
+            while($row = mysqli_fetch_array($sql)){
+                $i++;
+                echo '<div class="kitap">
+                <img src="'.$row["resim_yolu"].'" width="100px">
+                <h5>'.$row["ad"].'</h5>
+                <h6>'.$row["yazar"].'</h6>
+                <a href="sepet.php?id='.$row["id"].'"><button class="button button1" name="sepet">'.$row["fiyat"].'TL</button></a>
+                </div>';
+                if($i===12){
+                    echo '<div class="temizle"></div>';
+                    $i = 0;
+                }
+            }
+        }
+        ?>
     </section>
     <footer>MGuvenc</footer>
 </body>
