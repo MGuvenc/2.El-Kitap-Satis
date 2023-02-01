@@ -21,7 +21,12 @@
 
     <nav>
         <h3>KATEGORİLER</h3>
-        
+        <?php
+        $sql = mysqli_query($conn, "SELECT * FROM kategori");
+        while($row = mysqli_fetch_array($sql)){
+            echo '<a href="index.php?id='.$row["id"].'">'.$row["kategori_adi"].'</a>';
+        }
+        ?>
     </nav>
 
     <section>
